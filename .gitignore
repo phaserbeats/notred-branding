@@ -1,0 +1,17 @@
+.DS_Store
+*.swp
+*.swo
+.vscode/
+.idea/
+node_modules/
+.env
+.env.local
+
+# Large binary assets in reference/ — keep them locally but don't commit
+reference/**/*.jpg
+reference/**/*.jpeg
+reference/**/*.png
+reference/**/*.heic
+reference/**/*.mp4
+reference/**/*.mov
+!reference/README.md
