@@ -27,16 +27,20 @@ if [[ -z "$WEBHOOK_URL" ]] || [[ "$WEBHOOK_URL" == "REPLACE_ME" ]]; then
   exit 3
 fi
 
-# Discord caps message bodies at 2000 characters. Split into chunks on blank-line
-# boundaries where possible so headings stay intact.
-python3 - "$DAILY_FILE" "$WEBHOOK_URL" <<'PY'
-import json, sys, urllib.request, urllib.error
+# Discord caps message bodies at 2000 characters. Use Python only to chunk the
+# file and emit JSON payloads, then post each one with curl (which uses the
+# macOS system cert store and avoids Python's SSL bundle issues).
+TMPDIR=$(mktemp -d)
+trap 'rm -rf "$TMPDIR"' EXIT
 
-path, webhook = sys.argv[1], sys.argv[2]
+python3 - "$DAILY_FILE" "$TMPDIR" <<'PY'
+import json, sys, os
+
+path, tmpdir = sys.argv[1], sys.argv[2]
 with open(path) as f:
     body = f.read()
 
-MAX = 1900  # leave headroom for codefence wrap
+MAX = 1900
 chunks, buf = [], ""
 for para in body.split("\n\n"):
     candidate = (buf + "\n\n" + para).strip() if buf else para
@@ -49,17 +53,25 @@ if buf:
     chunks.append(buf)
 
 for i, chunk in enumerate(chunks):
-    payload = json.dumps({"content": chunk}).encode()
-    req = urllib.request.Request(
-        webhook,
-        data=payload,
-        headers={"Content-Type": "application/json"},
-    )
-    try:
-        urllib.request.urlopen(req, timeout=10).read()
-    except urllib.error.URLError as e:
-        print(f"discord push failed on chunk {i+1}/{len(chunks)}: {e}", file=sys.stderr)
-        sys.exit(4)
+    with open(os.path.join(tmpdir, f"chunk-{i:03d}.json"), "w") as f:
+        json.dump({"content": chunk}, f)
 
-print(f"posted {len(chunks)} chunk(s) to discord")
+print(len(chunks))
 PY
+
+CHUNK_COUNT=$(ls "$TMPDIR" | wc -l | tr -d ' ')
+i=0
+for payload_file in "$TMPDIR"/chunk-*.json; do
+  i=$((i + 1))
+  if ! curl -sS -f \
+        -X POST \
+        -H "Content-Type: application/json" \
+        --data-binary "@$payload_file" \
+        --max-time 15 \
+        "$WEBHOOK_URL" > /dev/null; then
+    echo "discord push failed on chunk $i/$CHUNK_COUNT" >&2
+    exit 4
+  fi
+done
+
+echo "posted $CHUNK_COUNT chunk(s) to discord"
