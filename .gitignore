@@ -16,3 +16,6 @@ reference/**/*.heic
 reference/**/*.mp4
 reference/**/*.mov
 !reference/README.md
+
+# Daily planner secrets — webhook URL etc.
+.claude/daily-planner.config.json
