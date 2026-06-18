@@ -19,3 +19,4 @@ reference/**/*.mov
 
 # Daily planner secrets — webhook URL etc.
 .claude/daily-planner.config.json
+.claude/logs/
