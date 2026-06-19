@@ -35,16 +35,16 @@ For each tradition where this motif has meaning, one paragraph:
 Cover at least three distinct traditions. More is better. Avoid Western-only coverage unless the motif is genuinely Western-specific.
 
 ## Material associations
-Gemstones, metals, settings, finishes historically paired with this motif and why.
+Gemstones, metals, settings, finishes, fabrics, dyes, and sonic textures historically paired with this motif and why. Cover the materials relevant to NOT RED's active disciplines (jewellery, apparel, music/AV) where the motif has been carried.
 
-## Jewellery precedents
-Specific historical or contemporary jewellery pieces that use this motif. Where possible: maker, date, material, where it can be seen. Cite the source.
+## Precedents
+Specific historical or contemporary uses of this motif across disciplines — jewellery pieces, garments, album art, posters, films. Where possible: maker, date, medium, material, where it can be seen. Cite the source.
 
 ## What NOT to claim
 The myths, misattributions, and pop-culture shortcuts about this motif that the brand should avoid. NOT RED does not repeat unsourced lore.
 
 ## Suggested NOT RED applications
-Three to five concrete ways NOT RED could use this motif in a custom piece, each one sentence. These are options for the copy and art directors to draw from, not commitments.
+Three to five concrete ways NOT RED could use this motif across its disciplines — a custom piece of jewellery, an apparel detail (stitch, patch, panel), a release theme, an event identity. Each one sentence. These are options for the copy and art directors to draw from, not commitments.
 
 ## Sources
 Numbered list of every source cited above. Books with author and page where possible. URLs only when the source is digital-first.

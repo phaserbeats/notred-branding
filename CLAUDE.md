@@ -1,6 +1,6 @@
 # NOT RED — Project Instructions
 
-This project produces marketing content for **NOT RED**, a luxury/heirloom custom jewellery brand whose differentiator is symbolism.
+This project produces marketing content for **NOT RED**, a creative-house collaboration between Phaser (music producer, creative direction, taste, cultural reach) and above zero (designer, visual identity, jewellery and apparel design). Every form of work either of them produces — custom symbolic jewellery, luxury streetwear (Gallery Dept register, custom-stitched), music releases, audio-visual sets and events — ships under NOT RED. The differentiator across all of it is **symbolism**.
 
 ## Sources of truth
 - `BRAND.md` — the brand contract. Voice, visual rules, anti-brand. All agent output must comply.

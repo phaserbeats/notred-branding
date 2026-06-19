@@ -1,0 +1,32 @@
+{
+  "dominant_palette": "black, silver, ivory/cream, gold, deep red/burgundy",
+  "secondary_palette": "electric blue, charcoal grey, rust/terracotta",
+  "recurring_motifs": [
+    "signet ring",
+    "crown",
+    "sword/dagger",
+    "horse",
+    "serpent",
+    "skull/skeleton",
+    "hand holding object",
+    "calligraphy/type-as-symbol",
+    "chess piece",
+    "heart (anatomical)",
+    "comb/ritual object",
+    "armour"
+  ],
+  "composition_vocabulary": "Tiles alternate between stark object-on-black isolation and dense layered arrangements. Central placement dominates — the hero object is framed symmetrically and given room, occasionally edge-bled for tension. Graphic-design tiles use negative space aggressively; photographic tiles lean into tight cropping that suggests weight and solidity.",
+  "lighting_quality": "Predominantly chiaroscuro — deep shadows and controlled single-source or rim lighting that gives objects a sculptural, almost theatrical gravity; a minority of tiles use flat editorial-studio light.",
+  "material_textures": "polished silver, oxidised metal, brushed gold, carved stone/bone, parchment/aged paper, smooth glass/resin",
+  "aesthetic_register": "Mystic-talisman fused with streetwear-adjacent luxury — objects carry coded meaning and ceremony, but the graphic language and brand references (Trapstar, Tom Ford) ground it in contemporary cultural capital rather than antique heirloom.",
+  "mood_words": [
+    "sovereign",
+    "ritualistic",
+    "confrontational",
+    "nocturnal",
+    "coded",
+    "weighted"
+  ],
+  "notably_absent": "Soft, feminine styling cues — florals, pearls, delicate chain arrangements, pastel editorial light, or the kind of lifestyle-aspirational context (wrist shots, flat-lays on linen) common on luxury jewellery moodboards are entirely absent.",
+  "tile_count_estimate": 25
+}
