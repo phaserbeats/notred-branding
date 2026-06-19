@@ -20,3 +20,15 @@ reference/**/*.mov
 # Daily planner secrets — webhook URL etc.
 .claude/daily-planner.config.json
 .claude/logs/
+
+# Assets: keep IG image binaries local, version-control the JSON metadata
+assets/**/*.jpg
+assets/**/*.jpeg
+assets/**/*.png
+assets/**/*.heic
+assets/**/*.mp4
+assets/**/*.mov
+
+# Pinterest: keep raw scrape + mosaics local, version-control the analysis JSON
+pinterest/raw/
+pinterest/mosaics/
